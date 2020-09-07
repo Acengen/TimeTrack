@@ -1,0 +1,25 @@
+.nav-bar {
+    padding: 20px;
+    background-color: #2D3047;
+    overflow: hidden; 
+    display: flex;
+    justify-content: space-between; 
+}
+
+button {
+    padding: 10px;
+    border: none;
+    text-align: right;
+    text-decoration: underline white;
+    background-color: unset;
+    color: white;
+    cursor: pointer;
+}
+
+button:focus, button:active, button:hover {
+    outline: none !important;
+}
+
+i {
+    color: seagreen;
+}

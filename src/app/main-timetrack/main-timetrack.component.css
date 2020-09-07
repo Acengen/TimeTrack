@@ -1,0 +1,71 @@
+.timetracker {
+  max-width: 600px;
+  margin: 20px auto;
+  
+  color: rgb(46, 46, 46);
+}
+.timespent {
+    font-size: 15px;
+    font-weight: lighter;
+}
+.timetracker p {
+  font-size: 50px;
+  text-align: center;
+}
+.timetracker h1 {
+  font-weight: lighter;
+  text-align: center;
+  margin: 20px;
+}
+
+button {
+  text-align: center;
+  width: 200px;
+  margin: auto; 
+  display: block; 
+  color: white;
+  border: none;
+  padding: 7px 20px;
+  cursor: pointer;
+  margin-top: 5px;
+  border-radius: 20px;
+  font-size: 10px;
+}
+
+.reportBtn {
+  color: black;
+  font-weight: bold;
+}
+
+.info-text {
+  font-size: 10px;
+  color:crimson;
+  
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.info-text2 {
+  color: seagreen;
+  font-size: 10px;
+  color:seagreen;
+  
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+}
+
+@media (max-width: 450px) {
+  .totaltext {
+    font-size: 20px;
+    
+  }
+  .timetracker h1 {
+    font-weight: bold;
+    margin: 20px;
+  }
+  .timetracker {
+    padding: 20px;
+  }
+}

@@ -1,0 +1,6 @@
+<div class="nav-bar">
+    <button (click)="goBackToHomepage()" *ngIf="isActive"><i class='fas fa-arrow-left'></i></button>
+    <button  routerLink="/login">SIGN IN</button>
+    
+</div>
+<router-outlet></router-outlet>

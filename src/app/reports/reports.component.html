@@ -1,0 +1,21 @@
+<div class="reports">
+  <h1>REPORTS</h1>
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Time report for {{dayOfWeek}}, <span style="font-weight: lighter;">{{monthYear}} {{dateString}}</span></th> 
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let report of reports">
+            <td>#</td>
+            <td><app-reports-item [reportString]="report"></app-reports-item></td>
+          </tr>
+          <tr>
+            <td>Total</td>
+            <td style="text-align: right;">{{totalHour}}h {{totalMin}}m {{totalSec}}</td>
+          </tr>
+        </tbody>
+      </table>
+    
+</div>

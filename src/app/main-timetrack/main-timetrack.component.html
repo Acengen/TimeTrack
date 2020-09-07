@@ -1,0 +1,11 @@
+<div class="timetracker">
+    <span>{{dayOfWeek}} <span style="font-weight: lighter;">{{dateString}} {{daydateYear}}, {{getHourse}}:{{getMinutes}}</span></span>
+    <h2 class="timespent">Time spent today: <span style="font-weight: bold;">{{stopTime}}</span></h2>
+    <h1 class="totaltext" *ngIf="!stopTime">TOTAL TIME SPENT TODAY</h1>
+    <h1 *ngIf="!stopTime">{{stopTime}}</h1>
+    <p>{{hour < 10? zeroText + hour: hour}}:{{min < 10? zeroText + min: min}}:{{sec < 10? zeroText + sec: sec}} </p>
+    <button (click)="onToReport()" class="reportBtn" routerLink="/reports">REPORTS</button>
+    <button [ngStyle]="{'backgroundColor': !isRunning ? 'rgb(95, 189, 18)' : 'rgb(43, 49, 39)'}" (click)="StopTime()">{{isRunning? "CLOCK OUT" : "CLOCK IN"}}</button>
+    <span class="info-text" *ngIf="isRunning">Clicking <strong>CLOCK OUT</strong> button will stop the time counter.</span>
+    <span class="info-text2" *ngIf="!isRunning">Clicking <strong>CLOCK IN</strong> button will start the time counter.</span>
+</div>

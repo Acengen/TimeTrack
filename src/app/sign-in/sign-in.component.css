@@ -1,0 +1,77 @@
+.sign-in-form {
+    background-color: #232536;
+    color: white;
+    padding: 20px;
+    height: 100vh;
+}
+
+.sign-in-form h1 {
+    font-size: 30px;
+    text-align: center;
+}
+
+form {
+    max-width: 500px;
+    margin: auto;
+}
+
+input::placeholder {
+    font-style: italic;
+}
+label {
+    margin-top: 15px;
+}
+input {
+    background-color: #232536;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-radius: 0px;
+
+}
+
+input:hover, input:focus, input:active {
+    outline: none !important;
+    background-color: unset !important;
+    
+}
+input:active, input:focus {
+    border-color: seagreen;
+}
+input:focus::placeholder {
+    visibility: hidden;
+}
+.subBtn {
+    width: 100%;
+    padding: 8px 20px;
+    background-color: seagreen;
+    border-radius: 20px;
+    color: white;
+    margin-top: 30px;
+    cursor: pointer;
+}
+.changeBtn {
+    border:none;
+    color: seagreen;
+    text-decoration: underline;
+    background-color: unset;
+    font-weight: bold;
+}
+.memberinfo {
+    text-align: center;
+    display: block;
+    margin-top: 10px;
+}
+
+
+/* Form validation css */
+
+input.ng-invalid.ng-touched {
+    border-bottom-color: crimson;
+}
+
+.terms {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 12px;
+}

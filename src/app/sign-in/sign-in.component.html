@@ -1,0 +1,35 @@
+<div class="sign-in-form">
+    <h1><span style="color: seagreen;">Time</span> Track</h1>
+    <div *ngIf="!isChanged">
+        <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+            <label class="label">EMAIL</label>
+            <input class="form-control" type="email" name="email" placeholder="email@example.com" required email #email="ngModel" ngModel>
+            <p style="color: crimson;" *ngIf="!email.valid && email.touched">*Email required</p>
+            <label>PASSWORD</label>
+            <input class="form-control" type="password" name="password" placeholder="5+ characters" #password="ngModel" required ngModel minlength="5">
+            <p style="color: crimson;" *ngIf="!password.valid && password.touched">*Password required</p>
+            <button type="submit" [disabled]="!f.valid" class="subBtn">SIGN IN</button>
+        </form>
+        <span class="memberinfo">Not a member? <button (click)="changeForm()" class="changeBtn" type="button">SIGN UP</button></span>
+    </div>
+    <!-- IF YOU ARE NOT A MEMBER -->
+    <div *ngIf="isChanged">
+        <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+            <label>FULL NAME</label>
+            <input class="form-control" type="text" name="name" placeholder="Jhon Doe" required ngModel>
+            <label>EMAIL</label>
+            <input class="form-control" type="email" name="email" placeholder="email@example.com" required email ngModel #email="ngModel">
+            <p style="color: crimson;" *ngIf="!email.valid && email.touched">*Please enter valid email</p>
+            <label>PASSWORD</label>
+            <input class="form-control" type="password" name="password" placeholder="5+ characters" required ngModel #password="ngModel" minlength="5">
+            <p style="color:crimson" *ngIf="!password.valid && password.touched">*Must have at least 5 characters</p> 
+            <button [disabled]="!f.valid" type="submit" class="subBtn">SIGN IN</button>
+        </form>
+        <span class="memberinfo">Already a member? <button (click)="changeForm()" class="changeBtn" type="button">SIGN IN</button></span>
+    </div>
+    <div *ngIf="isChanged" class="terms">
+        <span>By clicking on Sign up, you agree to TIME TRACK's <br>
+        <span style="text-decoration: underline;">Terms and Conditions</span> and <span style="text-decoration: underline;">Privacy Policy</span></span>
+    </div>
+</div>
+
